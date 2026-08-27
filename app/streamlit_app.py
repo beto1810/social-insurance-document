@@ -82,7 +82,7 @@ for key, value in DEFAULT_STATE.items():
 # HEADER
 # ============================================================
 
-st.title("📄 AI Document Understanding")
+st.title("📄 Social Insurance Documents OCR + KIE")
 st.caption("Upload → OCR + KIE → Review → Commit → Export")
 
 uploaded_files = st.file_uploader(
