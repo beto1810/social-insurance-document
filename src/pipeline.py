@@ -392,7 +392,7 @@ class DocumentPipeline:
         device: str | None = None,
         score_thresh: float = 0.1,
         kie_debug: bool = False,
-        recognition_batch_size: int = 32,
+        recognition_batch_size: int = 64,
         enable_orientation: bool = True,
         pdf_dpi: int = 200,
     ) -> None:
@@ -1746,7 +1746,7 @@ def main() -> None:
     parser.add_argument(
         "--recognition-batch-size",
         type=int,
-        default=32,
+        default=16,
         help=(
             "VietOCR recognition "
             "batch size"

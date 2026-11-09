@@ -45,7 +45,7 @@ st.set_page_config(
 def load_pipeline():
     return DocumentPipeline(
         device=get_device(),
-        score_thresh=0.3,
+        score_thresh=0.1,
         recognition_batch_size=32,
         enable_orientation=True,
     )

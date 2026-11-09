@@ -22,3 +22,18 @@ def build_detector(
     return TextDetection(
         **detector_config,
     )
+
+
+def load_detector(
+    device: str | None = None,
+    score_thresh: float = 0.5,
+) -> TextDetection:
+    """Compatibility wrapper used by benchmark scripts.
+
+    The project exposes `build_detector` as the primary factory, but older
+    scripts import `load_detector` and expect the same behavior.
+    """
+    return build_detector(
+        device=device,
+        score_thresh=score_thresh,
+    )

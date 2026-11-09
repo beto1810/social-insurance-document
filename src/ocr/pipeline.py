@@ -80,7 +80,7 @@ def process_image(
     recognizer,
     orient_corrector,
     score_thresh: float = 0.3,
-    recognition_batch_size: int = 32,
+    recognition_batch_size: int = 64,
     enable_orientation: bool = True,
 ) -> dict:
 

@@ -16,8 +16,7 @@ from src.ocr.preprocessing import crop_quad
 HF_REPO_ID = "datnguyen1810/social-insurance-document-models"
 
 HF_VIETOCR_FILE = (
-    "ocr/vietocr_social_insurance/"
-    "vgg_transformer_social_insurance.pth"
+    "ocr/vietocr_social_insurance_seq2seq/vgg_seq2seq_social_insurance.pth"
 )
 
 def get_vietocr_weights() -> Path:
@@ -52,7 +51,7 @@ def build_recognizer(
 
     t = time.perf_counter()
 
-    config = Cfg.load_config_from_name("vgg_transformer")
+    config = Cfg.load_config_from_name("vgg_seq2seq")
 
     print(
         f"[Recognizer] Config loaded in "
